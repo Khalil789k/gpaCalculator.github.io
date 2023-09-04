@@ -210,6 +210,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 /* Copyright styling */
 #copyright {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     position: fixed;
     bottom: 0;
     z-index: 200;
@@ -221,6 +222,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 /* Name styling */
 #myName {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     background: linear-gradient(45deg, #ff6600, #ff33cc);
     -webkit-background-clip: text;
     background-clip: text;

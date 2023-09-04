@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="pictures/4x/Asset 4xxxhdpi.png" type="image/png">
+    <title>GPA Calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container_icon_text">
+        <h4 id="icon_text">GPA Calculator</h4>
+        <div class="theme-switch">
+            <button id="theme-toggle">
+                <i class="sun_color fas fa-sun"></i>
+                <i class="moon_color fas fa-moon"></i>
+            </button>
+        </div>
+    </div>
+
+    <div id="fixed"></div>
+
+    <!-- Existing courses and their inputs -->
+    <div id="existingCourses">
+        <div class="container_input_box">
+            <input class="input_box input_box_name" type="text" placeholder="Course Name">
+            <input class="input_box input_box_credit" type="number" placeholder="Credit Hours">
+            <input class="input_box input_box_marks" type="number" placeholder="Marks">
+            <button class="deleteCourse delete_button"><span class="cross_icon">&#10005;</span></button>
+        </div>
+        <div class="container_input_box">
+            <input class="input_box input_box_name" type="text" placeholder="Course Name">
+            <input class="input_box input_box_credit" type="number" placeholder="Credit Hours">
+            <input class="input_box input_box_marks" type="number" placeholder="Marks">
+            <button class="deleteCourse delete_button"><span class="cross_icon">&#10005;</span></button>
+        </div>
+        <div class="container_input_box">
+            <input class="input_box input_box_name" type="text" placeholder="Course Name">
+            <input class="input_box input_box_credit" type="number" placeholder="Credit Hours">
+            <input class="input_box input_box_marks"type="number" placeholder="Marks">
+            <button class="deleteCourse delete_button"><span class="cross_icon">&#10005;</span></button>
+        </div>
+    </div>
+    
+    <div class="container_input_box_dynamic" id="courseContainer">
+    <!-- Course inputs will be added here dynamically -->
+    </div>
+
+    <!-- Add course button -->
+    <div class="add_course">
+        <button class="add_course_button" onclick="addCourse()"><span class="plus_sign">&#8853</span>Add Course</button>
+    </div>
+ 
+    <!-- Calculate button -->
+    <div class="calculate_section">
+    <button class="calculate_button" onclick="calculateGPA()">Calculate</button>
+    </div>
+    
+    <!-- GPA Output -->
+    <div id="gpaResultContainer">
+    <p id="your_gpa">Your GPA <span id="gpaResult">0.00</span></p>
+    </div>
+
+    <div>
+        <p id="copyright"><span id="myName">KHALIL AHMAD</span> | &copy; 2023 All rights reserved.</p>
+    </div>
+
+    <!-- Linking JavaScript File -->
+    <script src="script.js"></script>
+
+</body>
+</html>

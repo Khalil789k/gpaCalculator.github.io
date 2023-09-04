@@ -1,0 +1,364 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+::placeholder {
+    color: rgb(68, 68, 68);
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+/* container having icon image and name */
+.container_icon_text {
+    height: 90px;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    box-shadow: 0 0 7px black;
+}
+/* icon heading text */
+#icon_text {
+    color: #0047Ab;
+    font-size: 25px;
+    margin: auto 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* container of 3 input boxes */
+.container_input_box , .add_course {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin: 20px;
+}
+
+/* 3 input boxes */
+.input_box {
+    border: 1px solid #808080;
+    outline: none;
+    padding: 8px;
+    box-shadow: 0 0 2px black;
+}
+/* Course name input box */
+.input_box_name {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width: 87%;
+}
+/* Credit input box */
+.input_box_credit {
+    border-bottom-left-radius: 5px;
+    width: 43.5%;
+    border-top: none;
+}
+/* Marks input box */
+.input_box_marks {
+    border-bottom-right-radius: 5px;
+    width: 43.5%;
+    border-top: none;
+    border-left: none;
+}
+
+
+/* Dynamically added courses */
+.inputBox {
+    border: 1px solid #808080;
+    outline: none;
+    padding: 8px;
+    box-shadow: 0 0 2px black;
+}
+/* dynamically added course */
+.courseNameClass {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    width: 87%;
+}
+.creditClass {
+    border-bottom-left-radius: 3px;
+    width: 43.5%;
+    border-top: none;
+}
+.marksClass {
+    border-bottom-right-radius: 3px;
+    width: 43.5%;
+    border-top: none;
+    border-left: none;
+}
+
+/* style for the delete button */
+.delete_button {
+    background-color: transparent;
+    border: 2px solid orange;
+    color: orange;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    bottom: 1.5px;
+    left: 10%;
+    transform: translate(-50% , -50%);
+    font-size: 10px;
+}
+/* cross icon */
+.cross_icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    font-size: 10px;
+}
+/* hover effect for delete button */
+.delete_button:hover {
+    border-color: black;
+    color: black;
+}
+/* add course button */
+.add_course_button {
+    box-sizing: border-box;
+    height: 65px;
+    background: transparent;
+    border: 1px dashed #808080;
+    border-radius: 6px;
+    font-size: 18px;
+    color: #808080;
+    text-align: center;
+    width: 100%;
+}
+.plus_sign {
+    color: #808080;
+    padding: 7px;
+    font-size: 20px;
+}
+.add_course_button:hover {
+    cursor: pointer;
+}
+/* Calculate button style */
+.calculate_section {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin: 20px;
+}
+.calculate_button {
+    width: 50%;
+    margin: auto;
+    margin-top: 15px;
+    border-radius: 55px;
+    border: none;
+    height: 35px;
+    color: white;
+    background: linear-gradient(to right, #DE3163, #FF7F50);
+    font-size: 17px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    margin-bottom: 120px;
+}
+.calculate_button:hover {
+    cursor: pointer;
+}
+/* GPA Output styling */
+#gpaResultContainer{
+    border-top: 1px solid #36454F;
+    height: 130px;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+}
+#your_gpa {
+    padding: 10px 20px;
+    position: absolute;
+    right: 10px;
+    color: #36454F;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+#gpaResult {
+    background: linear-gradient(45deg, #ff6600, #ff33cc);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-clip: text;
+    position: absolute;
+    right: 10px;
+    top: 28px;
+    font-size: 60px;
+}
+
+/* Add margin from top to show courses */
+#fixed {
+    margin-top: 110px;
+}
+/* Copyright styling */
+#copyright {
+    position: fixed;
+    bottom: 0;
+    z-index: 200;
+    padding: 5px 20px;
+    color: white;
+    background-color: rgb(77, 77, 77);
+    width: 100%;
+    box-shadow: 0 0 5px rgb(83, 83, 83);
+}
+/* Name styling */
+#myName {
+    background: linear-gradient(45deg, #ff6600, #ff33cc);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-clip: text;
+}
+
+/* Theme switch button styles */
+.theme-switch {
+    position: relative;
+    top: 33px;
+    margin-left: 20px;
+}
+#theme-toggle {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    outline: none;
+}
+
+/* Add hover effect for input containers */
+.container_input_box.hovered .input_box_name,
+.container_input_box.hovered .input_box_credit,
+.container_input_box.hovered .input_box_marks {
+    border-top: 2px solid orange;
+    border-left: 2px solid orange;
+    border-right: 2px solid orange;
+    border-bottom: 2px solid orange;
+}
+  
+  
+  
+/* Add hover effect for input boxes */
+.container_input_box:hover .input_box_name {
+    border-top: 2px solid orange; /* Add orange top border */
+    border-right: 2px solid orange; /* Add orange right border */
+    border-bottom: 1px solid #808080; /* Add black bottom border */
+}
+  
+.container_input_box:hover .input_box_credit {
+    border-top: none; /* Remove top border */
+    border-right: none; /* Remove right border */
+}
+  
+.container_input_box:hover .input_box_marks {
+    border-top: none; /* Remove top border */
+    border-left: 1px solid #808080; /* Add black left border */
+}
+  
+  
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #343434;
+    color: #ffffff;
+}
+/* Hide moon icon in dark mode */
+body:not(.dark-mode) .fa-moon {
+    display: none;
+}
+/* Hide sun icon in light mode */
+body.dark-mode .fa-sun {
+    display: none;
+}
+/* Additional dark mode styles */
+.dark-mode .container_icon_text {
+    background-color: #343434;
+    box-shadow: 0 0 10px #b3b3b3;
+}
+.dark-mode .sun_color {
+    color:white;
+}
+.dark-mode #icon_text {
+    color: #8dccff;
+}
+.dark-mode .input_box, .dark-mode .inputBox {
+    background-color: #303030;
+}
+.dark-mode .add_course_button {
+    border : 1px dashed white;
+    color: white;
+}
+.dark-mode .plus_sign {
+    color: white;
+}
+.dark-mode #gpaResultContainer {
+    border-top: 1px solid white;
+    background-color: #343434;
+}
+.dark-mode #your_gpa {
+    color: white ;
+}
+.dark-mode .calculate_button {
+    color: #343434;
+}
+.dark-mode .input_box, .dark-mode .inputBox {
+    border: 1px solid white;
+    box-shadow: 0 0 2px white;
+}
+.dark-mode .input_box_credit, .dark-mode .creditClass {
+    border-top: none;
+}
+.dark-mode .input_box_marks, .dark-mode .marksClass {
+    border-top: none;
+    border-left: none;
+}
+.dark-mode ::placeholder {
+    color: rgb(216, 206, 206);
+}
+.dark-mode input {
+    color: #ffffff;
+}
+.dark-mode #copyright {
+    background-color: rgb(240, 240, 240);
+    color: black;
+}
+
+  
+@media (min-width: 900px) {
+    body {
+        width: 50%;
+        margin: 0 auto;
+        align-items: center;
+    }
+    .container_icon_text {
+        width: 50%;
+        border-radius: 5px;
+    }
+    #gpaResultContainer {
+        width: 50%;
+    }
+    .theme-switch {
+        position: relative;
+        top: 33px;
+        right: auto;
+        margin-left: 100px;
+    }
+    #copyright {
+        width: 50%;
+    }
+}

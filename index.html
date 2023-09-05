@@ -6,6 +6,7 @@
     <link rel="icon" href="pictures/4x/Asset 4xxxhdpi.png" type="image/png">
     <title>GPA Calculator</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,6 +18,21 @@
                 <i class="sun_color fas fa-sun"></i>
                 <i class="moon_color fas fa-moon"></i>
             </button>
+            <!-- Adding dropdown toggle button  -->
+            <button id="dropdown-toggle" class="dropdown-button">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <!-- Adding the dropdown menu -->
+        <div id="dropdown-menu" class="dropdown-menu">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Instructions</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Help & FAQs</a>
+            <a href="#">Rate Us</a>
+            <a href="#">Share</a>
+            <a href="#">Copyright</a>
         </div>
     </div>
 
@@ -60,11 +76,10 @@
     
     <!-- GPA Output -->
     <div id="gpaResultContainer">
-    <p id="your_gpa">Your GPA <span id="gpaResult">0.00</span></p>
-    </div>
-
-    <div>
-        <p id="copyright"><span id="myName">KHALIL AHMAD</span> | &copy; 2023 All rights reserved.</p>
+        <div id="chartContainer">
+            <canvas id="gpaChart"></canvas>
+        </div>
+        <p id="your_gpa">Your GPA <span id="gpaResult">0.00</span></p>
     </div>
 
     <!-- Linking JavaScript File -->

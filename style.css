@@ -184,7 +184,7 @@ input[type=number]::-webkit-outer-spin-button {
     bottom: 0;
 }
 #your_gpa {
-    padding: 10px 20px;
+    padding: 20px 20px;
     position: absolute;
     right: 10px;
     color: #36454F;
@@ -200,36 +200,33 @@ input[type=number]::-webkit-outer-spin-button {
     background-clip: text;
     position: absolute;
     right: 10px;
-    top: 28px;
+    top: 45px;
     font-size: 60px;
 }
-
+/* Chart styling */
+#chartContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 35px;
+    width: 50%;
+    height: 90%;
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#gpaChart {
+    width: 100%;
+    height: 100%;
+    max-width: 200px;
+    max-height: 200px;
+}
 /* Add margin from top to show courses */
 #fixed {
     margin-top: 110px;
 }
-/* Copyright styling */
-#copyright {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    position: fixed;
-    bottom: 0;
-    z-index: 200;
-    padding: 5px 20px;
-    color: white;
-    background-color: rgb(77, 77, 77);
-    width: 100%;
-    box-shadow: 0 0 5px rgb(83, 83, 83);
-}
-/* Name styling */
-#myName {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background: linear-gradient(45deg, #ff6600, #ff33cc);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    background-clip: text;
-}
-
 /* Theme switch button styles */
 .theme-switch {
     position: relative;
@@ -258,8 +255,6 @@ input[type=number]::-webkit-outer-spin-button {
   
 /* Add hover effect for input boxes */
 .container_input_box:hover .input_box_name {
-    border-top: 2px solid orange; /* Add orange top border */
-    border-right: 2px solid orange; /* Add orange right border */
     border-bottom: 1px solid #808080; /* Add black bottom border */
 }
   
@@ -273,7 +268,8 @@ input[type=number]::-webkit-outer-spin-button {
     border-left: 1px solid #808080; /* Add black left border */
 }
   
-  
+/* HERE STARTS THE SYLES FOR DARK THEME   */
+
 /* Dark mode styles */
 body.dark-mode {
     background-color: #343434;
@@ -335,12 +331,53 @@ body.dark-mode .fa-sun {
 .dark-mode input {
     color: #ffffff;
 }
-.dark-mode #copyright {
-    background-color: rgb(240, 240, 240);
-    color: black;
+/* DARK THEME STYLES END HERE */
+
+/* Dropdown menu styles */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 2px);
+    right: 0;
+    background-color: white;
+    z-index: 999;
+    overflow: hidden;
+    transition: max-height 1s ease-in-out;
+    max-height: 0;
+    width: 100%;
+}
+.dropdown-menu.open {
+    display: block;
+    max-height: 100vh;
+}
+.dropdown-menu a {
+    display: block;
+    padding: 15px 30px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+}
+.dropdown-menu.open a {
+    background-color: #f0f0f0;
+    color: #000;
+}
+.dropdown-menu a:hover {
+    background-color: #e0e0e0;
+}
+.dropdown-button {
+    color: #121212;
+    background: transparent;
+    border: 1px solid black;
+    position: fixed;
+    top: 25px;
+    right: 15px;
+    font-size: 25px;
+    width: 40px;
+    height: 40px;
 }
 
-  
+
+
 @media (min-width: 900px) {
     body {
         width: 50%;
@@ -360,7 +397,9 @@ body.dark-mode .fa-sun {
         right: auto;
         margin-left: 100px;
     }
-    #copyright {
-        width: 50%;
+    .dropdown-button {
+        position: relative;
+        top: 0;
+        margin-left: 270px;
     }
 }

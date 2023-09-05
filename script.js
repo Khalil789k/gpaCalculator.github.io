@@ -10,7 +10,7 @@ function calculateGPA() {
         var credit = parseFloat(creditInput.value);
         var marks = parseFloat(marksInput.value);
 
-        if (!isNaN(credit) && !isNaN(marks) && marks >= 50 && marks <= 100) {
+        if (!isNaN(credit) && !isNaN(marks)) {
             var grade = calculateGrade(marks); // Calculate grade based on marks
             totalCreditHours += credit;
             totalGradePoints += (credit * grade);
@@ -20,10 +20,46 @@ function calculateGPA() {
     if (totalCreditHours > 0) {
         var gpa = totalGradePoints / totalCreditHours;
         document.getElementById('gpaResult').textContent = gpa.toFixed(2); // Display GPA with two decimal places
+
+        // Update the doughnut chart
+        updateDoughnutChart(gpa);
     } else {
         document.getElementById('gpaResult').textContent = "0.00"; // Display "0.00" if no valid courses
+        updateDoughnutChart(0); // Update the chart with a default value of 0
     }
 }
+
+
+// Function to update the doughnut chart
+function updateDoughnutChart(gpa) {
+    if (gpaChart) {
+        gpaChart.data.datasets[0].data = [gpa, 4.00 - gpa]; // Update the chart data
+        gpaChart.update(); // Update the chart
+    }
+}
+
+var ctx = document.getElementById('gpaChart').getContext('2d');
+var gpaChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+        datasets: [{
+            data: [0, 4.00], // Initial data (0 GPA, 4.00 maximum)
+            backgroundColor: ['#36A2EB', '#E7E7E7'],
+        }],
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false, // Allows you to control the aspect ratio
+        legend: {
+            display: true,
+            position: 'bottom',
+        },
+        title: {
+            display: true,
+            text: 'GPA Distribution',
+        },
+    },
+});
 
 //Function to calculate grade based on marks
 
@@ -39,7 +75,7 @@ function calculateGrade(marks) {
     } else if (marks == 81) {
         return 3.74;
     } else if (marks == 80) {
-        return 3.68;
+        return 3.67;
     } else if (marks == 79) {
         return 3.60;
     } else if (marks == 78) {
@@ -216,3 +252,49 @@ themeToggle.addEventListener('click', () => {
     sunIcon.style.display = 'inline'; // Show sun icon
   }
 });
+
+// Function to set the initial max-height value
+function initializeDropdown() {
+    const dropdownMenu = document.getElementById("dropdown-menu");
+    dropdownMenu.style.maxHeight = dropdownMenu.scrollHeight + "px";
+}
+// Call the function when page loads
+window.addEventListener("load", initializeDropdown);
+
+let isDropdownTransitioning = false; // Flag to track if dropdown is in transition
+
+// Function to toggle the dropdown menu
+function toggleDropdown() {
+    const dropdownMenu = document.getElementById("dropdown-menu");
+    const dropdownToggle = document.getElementById("dropdown-toggle");
+
+    if (!isDropdownTransitioning) { // Check if dropdown is not in transition
+        isDropdownTransitioning = true; // Set flag to true
+        dropdownToggle.disabled = true; // Disable the button during the transition
+
+        if (dropdownMenu.classList.contains("open")) {
+            // Close the dropdown menu
+            dropdownMenu.style.maxHeight = "0";
+            setTimeout(() => {
+                dropdownMenu.style.display = "none";
+                isDropdownTransitioning = false; // Reset flag after transition
+                dropdownToggle.disabled = false; // Enable the button
+            }, 1000); // Adjust the delay as needed
+            dropdownToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            dropdownMenu.classList.remove("open");
+        } else {
+            // Open the dropdown menu
+            dropdownMenu.style.display = "block";
+            setTimeout(() => {
+                dropdownMenu.style.maxHeight = dropdownMenu.scrollHeight + "px";
+                isDropdownTransitioning = false; // Reset flag after transition
+                dropdownToggle.disabled = false; // Enable the button
+            }, 0); // Start the transition immediately
+            dropdownToggle.innerHTML = '<i class="fas fa-times"></i>';
+            dropdownMenu.classList.add("open");
+        }
+    }
+}
+//Event listner to toggle the dropdown menu when the button is clicked
+const dropdownToggle = document.getElementById("dropdown-toggle");
+dropdownToggle.addEventListener("click", toggleDropdown)

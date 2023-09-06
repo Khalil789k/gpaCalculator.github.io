@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Link to your existing CSS file -->
+    <style>
+      /* Add your CSS styles for the "About Us" section here */
+      body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background-color: #f2f2f2;
+        margin-bottom: 40px;
+      }
+
+      #about-section {
+        background-color: #ffffff;
+        padding: 40px;
+        margin: 20px auto;
+        max-width: 800px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      #about-section h2 {
+        font-size: 28px;
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      #about-section p {
+        font-size: 16px;
+        line-height: 1.5;
+        color: #3f3f3f;
+        margin-bottom: 20px;
+      }
+
+      #about-section a {
+        color: #007bff;
+        text-decoration: none;
+      }
+
+      #about-section a:hover {
+        text-decoration: underline;
+      }
+
+      #team-members {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .team-member {
+        flex: 1;
+        text-align: center;
+      }
+
+      .team-member img {
+        max-width: 100%;
+        border-radius: 50%;
+      }
+
+      .team-member h3 {
+        font-size: 20px;
+        margin-top: 10px;
+      }
+
+      .team-member p {
+        font-size: 14px;
+        color: #777;
+      }
+      #copyright {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        padding: 5px;
+        color: white;
+        background-color: rgb(77, 77, 77);
+        width: 100%;
+        box-shadow: 0 0 5px rgb(83, 83, 83);
+        text-align: center;
+        margin: 0;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+      }
+      #myName {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background: linear-gradient(45deg, #ff6600, #ff33cc);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        background-clip: text;
+      }
+    </style>
+    <title>About Us</title>
+  </head>
+  <body>
+    <div id="about-section">
+      <h2>About Us</h2>
+      <p>
+        Welcome to the GPA Calculator website. We are passionate about education
+        and providing tools that empower students and educators in their
+        academic journey.
+      </p>
+      <p>
+        Our GPA calculator is designed to make it easy for you to calculate your
+        GPA based on your course credits and marks. Our calculator is here to help
+        you stay organized and track your academic progress.
+      </p>
+      <p>
+        If you have any questions or feedback, please don't hesitate to
+        <a href="contact.html">contact us</a>. We value your input
+        and are committed to continuously improving our services.
+      </p>
+      <h2>Our Team</h2>
+      <div id="team-members">
+        <div class="team-member">
+          <img src="pictures/download.jpg" alt="Team Member 1" />
+          <h3>--------</h3>
+          <p>--------</p>
+        </div>
+        <div class="team-member">
+          <img src="pictures/download.jpg" alt="Team Member 2" />
+          <h3>KHALIL AHMAD</h3>
+          <p>Developer | Founder | Designer</p>
+        </div>
+        <div class="team-member">
+          <img src="pictures/download.jpg" alt="Team Member 3" />
+          <h3>--------</h3>
+          <p>--------</p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <p id="copyright">
+        <span id="myName">KHALIL AHMAD</span> | &copy; 2023 All rights reserved.
+      </p>
+    </div>
+  </body>
+</html>

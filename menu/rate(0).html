@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Your other head elements -->
+    <title>GPA Calculator</title>
+    <style>
+        /* Style for the Rate Us Section */
+        #rate-us-section {
+            background-color: #f5f5f5;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            margin: 20px auto;
+            max-width: 400px;
+        }
+
+        #rate-us-section h2 {
+            color: #333;
+            font-size: 24px;
+        }
+
+        #rate-us-section p {
+            color: #666;
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        .rate-us-button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .rate-us-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Style for the Rating Form */
+        #rating-form {
+            display: none; /* Initially hidden */
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        #rating-form label {
+            display: block;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        #rating-form input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        #rating-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #rating-form button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Your GPA Calculator content -->
+
+    <!-- Rate Us Section -->
+    <section id="rate-us-section">
+        <h2>Rate Us</h2>
+        <p>We would love to hear your feedback about our GPA Calculator. Please take a moment to rate and review it.</p>
+        <button class="rate-us-button" onclick="showRatingForm()">Rate Us</button>
+
+        <!-- Rating Form (Initially Hidden) -->
+        <form id="rating-form">
+            <label for="rating">Rate us:</label>
+            <input type="radio" id="rating1" name="rating" value="5">
+            <label for="rating1">5</label>
+            <input type="radio" id="rating2" name="rating" value="4">
+            <label for="rating2">4</label>
+            <input type="radio" id="rating3" name="rating" value="3">
+            <label for="rating3">3</label>
+            <input type="radio" id="rating4" name="rating" value="2">
+            <label for="rating4">2</label>
+            <input type="radio" id="rating5" name="rating" value="1">
+            <label for="rating5">1</label>
+            
+            <label for="review">Leave a review (optional):</label>
+            <textarea id="review" name="review" rows="4"></textarea>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <!-- JavaScript for rating functionality -->
+    <script>
+        function showRatingForm() {
+            const rateUsSection = document.getElementById('rate-us-section');
+            const ratingForm = document.getElementById('rating-form');
+
+            rateUsSection.style.display = 'none'; // Hide the Rate Us section
+            ratingForm.style.display = 'block'; // Show the Rating Form
+        }
+
+        // Add JavaScript to handle form submission here
+    </script>
+</body>
+</html>

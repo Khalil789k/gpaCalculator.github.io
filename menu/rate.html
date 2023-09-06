@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rate Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .rate-us-container {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .rating-stars {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            flex-direction: row-reverse;
+        }
+        .rating-stars input[type="radio"] {
+            display: none;
+        }
+        .rating-stars label {
+            font-size: 30px;
+            color: #ccc;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+        .rating-stars label:hover,
+        .rating-stars label:hover ~ label {
+            color: #ff9800;
+        }
+        .rating-stars input[type="radio"]:checked ~ label {
+            color: #ff9800;
+        }
+        .feedback-text {
+            width: 90%;
+            max-width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 150px;
+        }
+        .submit-button {
+            background-color: #ff9800;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        /* Copyright styling */
+
+#copyright {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 5px;
+    color: white;
+    background-color: rgb(77, 77, 77);
+    width: 100%;
+    box-shadow: 0 0 5px rgb(83, 83, 83);
+    text-align: center;
+    margin: 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index:1;
+
+}
+
+/* Name styling */
+
+#myName {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: linear-gradient(45deg, #ff6600, #ff33cc);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-clip: text;
+}
+    </style>
+</head>
+<body>
+    <div class="rate-us-container">
+        <h1>Rate Us</h1>
+        <div class="rating-stars">
+            <input type="radio" name="rating" id="star1" value="1">
+            <label for="star1">&#9733;</label>
+            <input type="radio" name="rating" id="star2" value="2">
+            <label for="star2">&#9733;</label>
+            <input type="radio" name="rating" id="star3" value="3">
+            <label for="star3">&#9733;</label>
+            <input type="radio" name="rating" id="star4" value="4">
+            <label for="star4">&#9733;</label>
+            <input type="radio" name="rating" id="star5" value="5">
+            <label for="star5">&#9733;</label>
+        </div>
+        <textarea class="feedback-text" placeholder="Your feedback"></textarea>
+        <button class="submit-button">Submit</button>
+        
+        <div>
+<p id='copyright'><span id='myName'>KHALIL AHMAD</span> | &copy; 2023 All rights reserved.</p>
+</div>
+    </div>
+</body>
+</html>

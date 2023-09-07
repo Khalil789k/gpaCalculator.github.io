@@ -39,17 +39,26 @@ function updateDoughnutChart(gpa) {
 }
 
 var ctx = document.getElementById('gpaChart').getContext('2d');
+
+// Function to generate a random color from a list
+function getRandomColor() {
+    var colors = ['#FF5733', '#33FF57', '#3366FF', '#FFA233', '#A233FF'];
+    return colors[Math.floor(Math.random() * colors.length)];
+}
+
+var backgroundColors = [getRandomColor(), '#E7E7E7'];
+
 var gpaChart = new Chart(ctx, {
     type: 'doughnut',
     data: {
         datasets: [{
             data: [0, 4.00], // Initial data (0 GPA, 4.00 maximum)
-            backgroundColor: ['#36A2EB', '#E7E7E7'],
+            backgroundColor: backgroundColors,
         }],
     },
     options: {
         responsive: true,
-        maintainAspectRatio: false, // Allows you to control the aspect ratio
+        maintainAspectRatio: false,
         legend: {
             display: true,
             position: 'bottom',
@@ -60,6 +69,7 @@ var gpaChart = new Chart(ctx, {
         },
     },
 });
+
 
 //Function to calculate grade based on marks
 

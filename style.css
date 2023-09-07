@@ -29,7 +29,7 @@ input[type=number]::-webkit-outer-spin-button {
     top: 0;
     z-index: 100;
     width: 100%;
-    box-shadow: 0 0 7px black;
+    box-shadow: 0 0 5px black;
 }
 /* icon heading text */
 #icon_text {
@@ -343,7 +343,7 @@ body.dark-mode .fa-sun {
 /* Additional dark mode styles */
 .dark-mode .container_icon_text {
     background-color: #343434;
-    box-shadow: 0 0 10px #b3b3b3;
+    box-shadow: 0 0 5px #b3b3b3;
 }
 .dark-mode .sun_color {
     color:white;
@@ -451,6 +451,7 @@ body.dark-mode .fa-sun {
         margin-bottom: 120px;
     }
 }
+
 @media (min-width: 769px) and (orientation: landscape) {
     body {
         zoom: 1;
@@ -464,7 +465,7 @@ body.dark-mode .fa-sun {
     }
     #your_gpa {
         position: absolute;
-        top: 530px;
+        bottom: 100px;
         right: 30px;
         border-radius: 50%;
         height: 100px;
@@ -477,7 +478,7 @@ body.dark-mode .fa-sun {
         width: 100%;
         height: 50%;
         position: absolute;
-        top: 100px;
+        top: 150px;
     }
     #gpaChart {
         max-width: none;
@@ -508,5 +509,44 @@ body.dark-mode .fa-sun {
     }
     .fourth_course {
         display: flex;
+    }
+    .dropdown-menu,
+    .dropdown-menu a,
+    .dropdown-menu.open,
+    .dropdown-menu.open a,
+    .dropdown-menu.open a:hover {
+        all: initial;
+    }
+    #dropdown-toggle,
+    .dropdown-button {
+        display: none;
+    }
+    .container_icon_text {
+        height: 130px;
+    }
+    #icon_text {
+        position: absolute;
+        bottom: 67px;
+    }
+    #dropdown-menuId {
+        background-color: white;
+        overflow: hidden;
+        position: absolute;
+        bottom: 0;
+        border-top: 1px solid #d4d4d4;
+        width: 100%;
+    }
+    .dropdown-menu a {
+        display: block;
+        text-decoration: none;
+        padding: 8px 20px;
+        float: left;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    #fixed {
+        margin-top: 150px;
+    }
+    .dark-mode #dropdown-menuId {
+        background-color: #343434;
     }
 }    

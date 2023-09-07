@@ -1,12 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>GPA Calculator - Share</title>
-    
+<html>
 
-    
-    <style>
+<head>
+ <meta name="viewport" content="width=device-width, initial-scale=1" />
+ <style>
         body {
             background-color: #f5f5f5;
             font-family: Arial, sans-serif;
@@ -40,9 +37,9 @@
             background-color: #ff33cc;
         }
     </style>
-    
-    
+ </style>
 </head>
+
 <body>
     <div class="share-container">
         <i class="share-icon fas fa-share-alt"></i>
@@ -53,31 +50,30 @@
         <p class="share-text">
             Click the button below to share via email or social media.
         </p>
-        <button class="share-button" onclick="copyCalculatorLink()">Share Now</button>
-
-
+        <button id="shareButton" class="share-button">Share Now</button>
     </div>
-    <script>
-function copyCalculatorLink() {
-            // Replace 'YOUR_CALCULATOR_URL' with the actual URL of your GPA Calculator
-            const calculatorUrl = 'https://example.com/gpa-calculator';
 
-            // Create a temporary input element to copy the URL
-            const tempInput = document.createElement('input');
-            tempInput.value = calculatorUrl;
-            document.body.appendChild(tempInput);
+<script>
+document.getElementById("shareButton").addEventListener("click", function() {
+  if (navigator.share) {
+    navigator.share({
+      title: "Your website title",
+      text: "Check out this awesome website!",
+      url: "https://khalil789k.github.io/gpaCalculator.github.io/"
+    })
+    .then(() => {
+      console.log("Share successful");
+    })
+    .catch((error) => {
+      console.error("Error sharing:", error);
+    });
+  } else {
+    // Fallback code for browsers that don't support Web Share API
+    alert("Sharing is not supported in this browser.");
+  }
+});
 
-            // Select and copy the URL
-            tempInput.select();
-            document.execCommand('copy');
-
-            // Remove the temporary input element
-            document.body.removeChild(tempInput);
-
-            // Provide feedback to the user
-            alert('Calculator link copied to clipboard!');
-        }
-    </script>
-    
+</script>
 </body>
+
 </html>

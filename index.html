@@ -27,11 +27,11 @@
         <div id="dropdown-menu" class="dropdown-menu">
             <a href="index.html">Home</a>
             <a href="menu/about.html">About</a>
-            <a href="menu/instructions1.html">Instructions</a>
+            <a href="menu/instructions.html">Instructions</a>
             <a href="menu/contact.html">Contact Us</a>
             <a href="menu/help.html">Help & FAQs</a>
             <a href="menu/rate.html">Rate Us</a>
-            <a href="#">Share</a>
+            <a href="menu/share.html">Share</a>
             <a href="menu/copyright.html">Copyright</a>
         </div>
     </div>
@@ -53,6 +53,12 @@
             <button class="deleteCourse delete_button"><span class="cross_icon">&#10005;</span></button>
         </div>
         <div class="container_input_box">
+            <input class="input_box input_box_name" type="text" placeholder="Course Name">
+            <input class="input_box input_box_credit" type="number" placeholder="Credit Hours">
+            <input class="input_box input_box_marks"type="number" placeholder="Marks">
+            <button class="deleteCourse delete_button"><span class="cross_icon">&#10005;</span></button>
+        </div>
+        <div class="container_input_box fourth_course">
             <input class="input_box input_box_name" type="text" placeholder="Course Name">
             <input class="input_box input_box_credit" type="number" placeholder="Credit Hours">
             <input class="input_box input_box_marks"type="number" placeholder="Marks">
@@ -80,6 +86,10 @@
             <canvas id="gpaChart"></canvas>
         </div>
         <p id="your_gpa">Your GPA <span id="gpaResult">0.00</span></p>
+    </div>
+
+    <div>
+        <p id='copyright'>Created by <span id='myName'>KHALIL AHMAD</span> | &copy; 2023 All rights reserved.</p>
     </div>
 
     <!-- Linking JavaScript File -->

@@ -528,7 +528,7 @@ body.dark-mode .fa-sun {
         position: absolute;
         bottom: 67px;
     }
-    #dropdown-menuId {
+    .dropdown-menu {
         background-color: white;
         overflow: hidden;
         position: absolute;

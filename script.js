@@ -265,7 +265,7 @@ themeToggle.addEventListener('click', () => {
 
 // Function to set the initial max-height value
 function initializeDropdown() {
-    const dropdownMenu = document.getElementById("dropdown-menu");
+    const dropdownMenu = document.getElementById("dropdown-menuId");
     dropdownMenu.style.maxHeight = dropdownMenu.scrollHeight + "px";
 }
 // Call the function when page loads
@@ -275,7 +275,7 @@ let isDropdownTransitioning = false; // Flag to track if dropdown is in transiti
 
 // Function to toggle the dropdown menu
 function toggleDropdown() {
-    const dropdownMenu = document.getElementById("dropdown-menu");
+    const dropdownMenu = document.getElementById("dropdown-menuId");
     const dropdownToggle = document.getElementById("dropdown-toggle");
 
     if (!isDropdownTransitioning) { // Check if dropdown is not in transition

@@ -465,7 +465,7 @@ body.dark-mode .fa-sun {
     }
     #your_gpa {
         position: absolute;
-        bottom: 100px;
+        bottom: 70px;
         right: 30px;
         border-radius: 50%;
         height: 100px;
@@ -548,5 +548,8 @@ body.dark-mode .fa-sun {
     }
     .dark-mode #dropdown-menuId {
         background-color: #343434;
+    }
+    .calculate_button {
+        margin-bottom: 60px;
     }
 }    

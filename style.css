@@ -552,4 +552,7 @@ body.dark-mode .fa-sun {
     .calculate_button {
         margin-bottom: 60px;
     }
+    .dark-mode .dropdown-menu {
+        border-top: 1px solid #868282;
+    }
 }    

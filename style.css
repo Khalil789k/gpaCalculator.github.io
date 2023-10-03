@@ -322,9 +322,6 @@ input[type=number]::-webkit-outer-spin-button {
 #copyright {
     display: none;
 }
-.fourth_course {
-    display: none;
-}
 /* HERE STARTS THE SYLES FOR DARK THEME   */
 
 /* Dark mode styles */
@@ -506,9 +503,6 @@ body.dark-mode .fa-sun {
         background-clip: text;
         color: transparent;
         background-clip: text;
-    }
-    .fourth_course {
-        display: flex;
     }
     .dropdown-menu,
     .dropdown-menu a,

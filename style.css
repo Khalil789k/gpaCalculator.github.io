@@ -1,4 +1,4 @@
-* {
+/** {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -550,3 +550,4 @@ body.dark-mode .fa-sun {
         border-top: 1px solid #868282;
     }
 }    
+*/

@@ -1,4 +1,4 @@
-/*//Function to calculate GPA
+//Function to calculate GPA
 function calculateGPA() {
     var allCourses = document.querySelectorAll('.container_input_box');
     var totalCreditHours = 0;
@@ -308,4 +308,4 @@ function toggleDropdown() {
 //Event listner to toggle the dropdown menu when the button is clicked
 const dropdownToggle = document.getElementById("dropdown-toggle");
 dropdownToggle.addEventListener("click", toggleDropdown)
-*/
+

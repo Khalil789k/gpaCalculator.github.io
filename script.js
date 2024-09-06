@@ -235,33 +235,11 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-// Theme switch button functionality
-const themeToggle = document.getElementById('theme-toggle');
-const sunIcon = document.querySelector('.fa-sun');
-const moonIcon = document.querySelector('.fa-moon');
-const body = document.body;
-
-if (body.classList.contains('dark-mode')) {
-    sunIcon.style.display = 'inline';
-    moonIcon.style.display = 'none';
-} else {
-    sunIcon.style.display = 'none';
-    moonIcon.style.display = 'inline';
-}
-
-themeToggle.addEventListener('click', () => {
-  if (body.classList.contains('dark-mode')) {
-    // Switch to light mode
-    body.classList.remove('dark-mode');
-    moonIcon.style.display = 'inline'; // Show moon icon
-    sunIcon.style.display = 'none';  // Hide sun icon
-  } else {
-    // Switch to dark mode
-    body.classList.add('dark-mode');
-    moonIcon.style.display = 'none';   // Hide moon icon
-    sunIcon.style.display = 'inline'; // Show sun icon
-  }
-});
+ // Theme switch functionality
+ const checkbox = document.getElementById("checkbox");
+ checkbox.addEventListener("change", () => {
+     document.body.classList.toggle("dark-mode");
+ });
 
 // Function to set the initial max-height value
 function initializeDropdown() {

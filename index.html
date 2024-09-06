@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,23 +10,39 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <div class="container_icon_text">
         <h4 id="icon_text">GPA Calculator</h4>
+
+        <div class="theme-switch">
+            <input type="checkbox" class="checkbox" id="checkbox">
+            <label for="checkbox" class="checkbox-label">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+                <span class="ball"></span>
+            </label>
+            <button id="dropdown-toggle" class="dropdown-button">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- 
         <div class="theme-switch">
             <button id="theme-toggle">
                 <i class="sun_color fas fa-sun"></i>
                 <i class="moon_color fas fa-moon"></i>
             </button>
-            <!-- Adding dropdown toggle button  -->
+          
             <button id="dropdown-toggle" class="dropdown-button">
                 <i class="fas fa-bars"></i>
             </button>
-        </div>
+        </div> -->
         <!-- Adding the dropdown menu -->
         <div id="dropdown-menuId" class="dropdown-menu">
             <a href="index">Home</a>
+            <a href="menu/cgpa.html">CGPA Calculator</a>
             <a href="menu/about">About</a>
             <a href="menu/instructions">Instructions</a>
             <a href="menu/contact">Contact Us</a>
@@ -55,25 +72,25 @@
         <div class="container_input_box">
             <input class="input_box input_box_name" type="text" placeholder="Course Name">
             <input class="input_box input_box_credit" type="number" placeholder="Credit Hours">
-            <input class="input_box input_box_marks"type="number" placeholder="Marks">
+            <input class="input_box input_box_marks" type="number" placeholder="Marks">
             <button class="deleteCourse delete_button"><span class="cross_icon">&#10005;</span></button>
         </div>
     </div>
-    
+
     <div class="container_input_box_dynamic" id="courseContainer">
-    <!-- Course inputs will be added here dynamically -->
+        <!-- Course inputs will be added here dynamically -->
     </div>
 
     <!-- Add course button -->
     <div class="add_course">
         <button class="add_course_button" onclick="addCourse()"><span class="plus_sign">&#8853</span>Add Course</button>
     </div>
- 
+
     <!-- Calculate button -->
     <div class="calculate_section">
-    <button class="calculate_button" onclick="calculateGPA()">Calculate</button>
+        <button class="calculate_button" onclick="calculateGPA()">Calculate</button>
     </div>
-    
+
     <!-- GPA Output -->
     <div id="gpaResultContainer">
         <div id="chartContainer">
@@ -90,5 +107,5 @@
     <script src="script.js"></script>
 
 </body>
-</html>
 
+</html>
